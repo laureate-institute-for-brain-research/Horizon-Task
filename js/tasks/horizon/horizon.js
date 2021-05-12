@@ -195,13 +195,13 @@ dialogCancelScheduler.add(quitPsychoJS, '', false);
 // Add Slides to resources
 var resources = [
 	// { name: 'game_type.xls', path: '/js/tasks/horizon/game_type.xls' },
-	{ name: 'game_type_practice.xls', path: '/js/tasks/horizon/game_type_practice.xls' },
-	// { name: 'instruct_schedule.xls', path: '/js/tasks/horizon/media/instruct_schedule.xls' },
-	{ name: 'example_play.xls', path: '/js/tasks/horizon/media/example_play.xls' },
-	{ name: 'instruct_slide_r2.xls', path: '/js/tasks/horizon/media/instruct_slide_r2.xls' },
-	{ name: `/js/tasks/horizon/media/horizonInstructions/Slide22.jpeg`, path: `/js/tasks/horizon/media/horizonInstructions/Slide22.jpeg` },
-	{ name: `/js/tasks/horizon/media/instruction_audio/slide22.m4a`, path: `/js/tasks/horizon/media/instruction_audio/slide22.m4a` }
-	// { name: '/js/tasks/horizon/media/instruction_audio/slide1_23m4a.m4a', path: '/js/tasks/horizon/media/instruction_audio/slide1_23m4a.m4a'}
+	{ name: 'game_type_practice.xls', path:  '/Horizon-Task' + '/js/tasks/horizon/game_type_practice.xls' },
+	// { name: 'instruct_schedule.xls', path:  '/Horizon-Task' + '/js/tasks/horizon/media/instruct_schedule.xls' },
+	{ name: 'example_play.xls', path:  '/Horizon-Task' + '/js/tasks/horizon/media/example_play.xls' },
+	{ name: 'instruct_slide_r2.xls', path:  '/Horizon-Task' + '/js/tasks/horizon/media/instruct_slide_r2.xls' },
+	{ name: `/js/tasks/horizon/media/horizonInstructions/Slide22.jpeg`, path:  '/Horizon-Task' + `/js/tasks/horizon/media/horizonInstructions/Slide22.jpeg` },
+	{ name: `/js/tasks/horizon/media/instruction_audio/slide22.m4a`, path:  '/Horizon-Task' + `/js/tasks/horizon/media/instruction_audio/slide22.m4a` }
+	// { name: '/js/tasks/horizon/media/instruction_audio/slide1_23m4a.m4a', path:  '/Horizon-Task' + '/js/tasks/horizon/media/instruction_audio/slide1_23m4a.m4a'}
 ]
 
 // for (var i = 1; i <= 22; i++){
