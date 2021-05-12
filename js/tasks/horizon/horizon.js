@@ -39,29 +39,12 @@ window.onload = function () {
 			}
 		})
 	})
-		// Read getINFO 
-		.then((values) => {
-			console.log(values)
-			if (values.subject && values.session && values.study) {
-				expInfo.participant = values.subject
-				expInfo.study = values.study
-				expInfo.session = values.session
-				expInfo.run_id = getQueryVariable('run')
 
-				// set next link
-				psychoJS.setRedirectUrls(
-					'/link?id=' + values.link + '&index=' + (parseInt(getQueryVariable('index')) + 1), // get next order.
-					'/' // cancellation url
-				)
-				
-
-			}
-		
-		
-		})
 		
 		// Read RUN Config
 		.then((values) => {
+
+			expInfo.run_id = getQueryVariable('run')
 			// console.log(values['instruct_schedule'])
 			resources.push({ name: 'run_schedule.xls', path: '/Horizon-Task/' + values['schedule'] })
 			resources.push({ name: 'instruct_schedule.csv', path: '/Horizon-Task/' + values['instruct_schedule'] })
@@ -73,7 +56,7 @@ window.onload = function () {
 			return new Promise((resolve, reject) => {
 				$.ajax({
 					type: 'GET',
-					url: values['instruct_schedule'],
+					url: '/Horizon-Task/' + values['instruct_schedule'],
 					dataType: 'text',
 					async: false,
 					success: (data) => {
@@ -119,7 +102,7 @@ window.onload = function () {
 				expInfo,
 				resources: resources,
 			  })
-			psychoJS._config.experiment.saveFormat = undefined // don't save to client side
+			//psychoJS._config.experiment.saveFormat = undefined // don't save to client side
 			
 			// console.log(psychoJS)
 		})
@@ -137,6 +120,7 @@ function formatDate() {
 
     return [year, month, day].join('_');
 }
+
 
 
 // open window:
